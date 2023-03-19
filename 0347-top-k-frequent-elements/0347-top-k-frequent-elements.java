@@ -2,7 +2,7 @@ class Solution {
     public int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer,Integer> map = new HashMap<>();
         for (int n :nums){
-            map.putIfAbsent(n,1);
+            map.putIfAbsent(n,0);
             map.put(n, map.get(n)+1);
             }
         
