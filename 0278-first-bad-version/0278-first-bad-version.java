@@ -2,7 +2,7 @@
       boolean isBadVersion(int version); */
 public class Solution extends VersionControl {
     public int firstBadVersion(int n) {
-        int low = 0;
+        int low = 1;
         int high = n;
         //System.out.println(low +" "+ high);
         while (low <= high) {
