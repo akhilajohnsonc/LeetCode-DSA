@@ -7,11 +7,8 @@ public class Solution extends VersionControl {
         //System.out.println(low +" "+ high);
         while (low <= high) {
             int middleposition = low + (high - low) / 2;
-            //System.out.println(middleposition);
-            if (isBadVersion(middleposition) == true &&
-                isBadVersion(middleposition - 1) == false) {
-                return middleposition;
-            } else if (isBadVersion(middleposition) == false) {
+            //System.out.println(middleposition)
+           if (isBadVersion(middleposition) == false) {
                 low = middleposition + 1;
                 //System.out.println( " Low is " + low);
             } else {
@@ -19,6 +16,6 @@ public class Solution extends VersionControl {
                 //System.out.println( " high is " + high);
             }
         }
-        return -1;
+        return high+1;
     }
 }
