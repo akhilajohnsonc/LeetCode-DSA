@@ -9,20 +9,13 @@ class Solution {
                 map.put(c, 1);
             } 
         }
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-        }
         for(char c : ransomNote.toCharArray() ){
             if(map.containsKey(c) == false || map.get(c) == 0){
                 return false;
             }
             else{
-                map.put(c, map.get(c) - 1);
-                
+                map.put(c, map.get(c) - 1);       
             }
-        }
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         }
         return true;
     }
