@@ -30,9 +30,11 @@ class Solution {
         for(int i = 0; i < ransomNote.length(); i++){
              char c = ransomNote.charAt(i);
             alphabet_tracker[c -'a'] --;
-            
-            if(alphabet_tracker[c -'a']<0)
-                return false;
+        }
+        
+        for(int n : alphabet_tracker){
+            if(n < 0)
+            return false;
         }
         return true;
     }
