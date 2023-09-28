@@ -14,7 +14,7 @@ class Solution {
         // int result = (set_size == 0 ) ? len : len - set_size + 1;
         // return result;
         
-        //using Array
+        //using Array runtime: 1ms beats 100%
         int chars[] = new int[128];
         for(char c : s.toCharArray()){
             chars[c]++;
