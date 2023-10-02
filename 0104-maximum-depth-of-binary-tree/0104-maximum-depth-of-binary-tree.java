@@ -20,7 +20,6 @@ class Solution {
         }
         int leftDepth = maxDepth(root.left);
         int rightDepth = maxDepth(root.right);
-        System.out.println("Left:"+ leftDepth + " Right: "+ rightDepth );
         return 1 + Math.max(leftDepth, rightDepth);
     }
 }
