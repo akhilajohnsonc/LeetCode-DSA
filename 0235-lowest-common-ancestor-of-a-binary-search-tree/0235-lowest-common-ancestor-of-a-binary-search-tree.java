@@ -10,20 +10,12 @@
 
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root== null){
-            return root;
-        }
+        if(root ==null) return root;
         
-        if(root.val > p.val && root.val > q.val){
-           // System.out.println("First if root.val" + root.val);
-            return lowestCommonAncestor(root.left, p, q);
-        }
-            
-        if(root.val < p.val && root.val < q.val){
-            // System.out.println("Second if root.val" + root.val);
-            return lowestCommonAncestor(root.right, p, q);
-        }
-        // System.out.println("-----> returning root " + root.val);   
-        return root; 
+        if(root.val > p.val && root.val> q.val) return lowestCommonAncestor(root.left, p,q);
+        
+        if(root.val < p.val && root.val< q.val) return lowestCommonAncestor(root.right, p,q);
+        
+        return root;
     }
 }
